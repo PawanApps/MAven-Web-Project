@@ -26,7 +26,7 @@ node {
                     //add stage sonar
                     bat 'mvn sonar:sonar'
                 }*/
-       stage('mail'){
+       /* stage('mail'){
 
          def subject = "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
     def summary = "${subject} (<${env.BUILD_URL}|Open>)"
@@ -34,7 +34,7 @@ node {
         <p>Error: ${errorMessage}</p>
         <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>"""
     emailext recipientProviders: [[$class: 'DevelopersRecipientProvider']], subject: subject, body: details
-       }
+       }*/
 
     }
     catch (err) {
