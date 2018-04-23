@@ -5,13 +5,13 @@ node {
 
     try {
 	
-	    stage('envset'){
+	  /*  stage('envset'){
 	     withEnv([
             "devopsName='Jenkins DevOps'",
             'emailTo=pawanit2014@gmail.com',
             'emailFrom=pawanit2014@gmail.com.com'
 	    ])
-	    }
+	    }*/
        stage('Checkout'){
 
           checkout scm
@@ -19,7 +19,7 @@ node {
 
        stage('Compiling'){
 
-          bat 'mvn deploy'
+          bat 'mvn install'
        }
 	   
       /*stage('Sonar') {
