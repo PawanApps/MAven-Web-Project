@@ -22,10 +22,10 @@ node {
           bat 'mvn deploy'
        }
 	   
-      stage('Sonar') {
+      /*stage('Sonar') {
                     //add stage sonar
                     bat 'mvn sonar:sonar'
-                }
+                }*/
        stage('mail'){
 
          def subject = "${currentBuild.result}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
